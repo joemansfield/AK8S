@@ -11,7 +11,7 @@ spec:
       - path: /v1
         backend:
           serviceName: hello-svc
-          servicePort: 30100
+          servicePort: 80
       - path: /v2
         backend:
           serviceName: hello-lb-svc
