@@ -12,13 +12,13 @@ spec:
       labels:
         run: web
     spec:
+      tolerations:
+      - key: "nodetype"
+        operator: Equal
+        value: "preemptible"
       containers:
       - image: gcr.io/google-samples/hello-app:1.0
         name: web
         ports:
         - containerPort: 8080
           protocol: TCP
-      tolerations:
-      - key: "nodetype"
-      operator: Equal
-      value: "preemptible"
