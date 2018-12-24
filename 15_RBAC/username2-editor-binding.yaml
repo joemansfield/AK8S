@@ -8,6 +8,6 @@ subjects:
   name: [USERNAME_2_EMAIL]
   apiGroup: rbac.authorization.k8s.io
 roleRef:
-  kind: ClusterRole
-  name: editor
+  kind: Role
+  name: edit
   apiGroup: rbac.authorization.k8s.io
