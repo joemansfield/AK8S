@@ -50,7 +50,7 @@ def list_time_series(project_id):
             for point in result.points:
                 total += point.value.int64_value
                 #print (point.value.int64_value)
-         return(total)    
+        return(total)    
     except:
          return(0)   
 
