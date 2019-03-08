@@ -75,4 +75,4 @@ def project_id():
 if __name__ == '__main__':
     result=list_time_series(project_id())
     if result>1:
-        print ("Favicon count: "+str(result)
+        print ("Favicon count: "+str(result))
