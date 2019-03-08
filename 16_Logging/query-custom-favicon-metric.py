@@ -38,7 +38,7 @@ def list_time_series(project_id):
     try:
         results = client.list_time_series(
             project_name,
-            'metric.type = "logging.googleapis.com/user/favicons_serveds"',
+            'metric.type = "logging.googleapis.com/user/favicons_served"',
             interval,
             monitoring_v3.enums.ListTimeSeriesRequest.TimeSeriesView.FULL)
     except:
