@@ -23,7 +23,7 @@ spec:
         args:
         - /bin/sh
         - -c
-        - nohup ./hello-app &2>/dev/null & sleep 30; touch /tmp/healthy; export xx=$((60+$RANDOM % 120)) ; sleep $xx ;  rm -rf /tmp/healthy
+        - sleep 30; nohup ./hello-app &2>/dev/null & touch /tmp/healthy; export xx=$((60+$RANDOM % 120)) ; sleep $xx ;  rm -rf /tmp/healthy
         livenessProbe:
           exec:
             command:
