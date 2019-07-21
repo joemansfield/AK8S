@@ -23,7 +23,7 @@ spec:
         args:
         - /bin/sh
         - -c
-        - sleep 30; touch /tmp/healthy; export xx=$((60+$RANDOM % 120)) ; sleep $xx ;  rm -rf /tmp/healthy
+        - nohup ./hello-app &2>/dev/null & sleep 30; touch /tmp/healthy; export xx=$((60+$RANDOM % 120)) ; sleep $xx ;  rm -rf /tmp/healthy
         livenessProbe:
           exec:
             command:
@@ -45,7 +45,7 @@ kind: Service
 metadata:
   name: readiness-svc
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   selector:
     app: readiness-test
   ports:
